@@ -1,0 +1,19 @@
+
+pygame.image.load('image_name.png') 
+item=pygame.image.load('image_name.png')
+pygame.transform.scale(item,(100,100))
+
+
+background=pygame.image.load('background.png') 
+
+background=pygame.transform.scale(background,(600,600))
+
+screen.blit(background,(0,0))
+screen.blit(toppipe,(tpx,tpy))
+
+a = screen.blit(bird,(x,y))
+b = screen.blit(pipe,(x1,y1)) 
+if a.colliderect(b)==True:
+	print("Stop Game")
+
+https://www.remove.bg/upload
