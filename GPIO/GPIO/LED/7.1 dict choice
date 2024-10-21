@@ -1,0 +1,21 @@
+import RPi.GPIO as GPIO
+import time
+GPIO.setmode(GPIO.BCM)
+pin_number=[14,18,23,25,7]
+for i in pin_number:
+    GPIO.setup(pin_number, GPIO.OUT)
+    
+color={"red":14,"green":23,"blue":18}
+
+ch=input("Enter color")
+
+if ch in color:
+    for i in range(0,10):
+        GPIO.output(color[ch],GPIO.HIGH)
+        time.sleep(1)
+        GPIO.output(color[ch],GPIO.LOW)
+        time.sleep(1)
+    
+    
+
+GPIO.cleanup()
